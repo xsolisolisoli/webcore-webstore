@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { PopupComponent } from "./popup/popup.component";
+import { PopupService } from './popup.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,10 @@ import { PopupComponent } from "./popup/popup.component";
 })
 export class AppComponent {
   title = 'webcore-webstore';
+
+  constructor(private popupService: PopupService) {}
+
+  showPopup() {
+    this.popupService.showToast('This is a toast message!');
+  }
 }

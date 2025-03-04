@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './popup.component.scss'
 })
 export class PopupComponent {
-
+  @Input() message: string = '';
 }
