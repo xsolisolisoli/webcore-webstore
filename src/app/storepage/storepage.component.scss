@@ -15,6 +15,18 @@
   h1 {
     color: rgb(0, 255, 4); // Text color (ensure contrast with backgrounds)
     -webkit-text-stroke: 1px #ff6b6b; // First outline (inner)
+    --lines: .0001px;
+    
+    mask: repeating-radial-gradient(
+        circle at center,
+        #000,
+        var(--lines),
+        #000,
+        0, /* transition hints make code easier to manage */
+        #0000,
+        calc(var(--lines) * 2),
+        #0000 0 /* trailing 0 is part of the hard stop logic */
+    );
   }
 
   .paper {
