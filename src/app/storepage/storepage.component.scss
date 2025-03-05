@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../../assets/fonts/LeagueGothic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.storepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  h1 {
+    color: rgb(0, 255, 4); // Text color (ensure contrast with backgrounds)
+    -webkit-text-stroke: 1px #ff6b6b; // First outline (inner)
+  }
+
+  .paper {
+    font-family: 'LeagueGothic', sans-serif;
+    width: 70vw; // Adjust the width as needed
+    aspect-ratio: 1.4 / 1;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
