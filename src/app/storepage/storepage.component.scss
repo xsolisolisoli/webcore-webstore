@@ -30,16 +30,34 @@
   }
 
   .paper {
-    box-shadow:4px black;
-    background-color: moccasin;
+    --lines: .1px;
+    background-color: rgb(251, 255, 0);
     font-family: 'LeagueGothic', sans-serif;
     width: 70vw; // Adjust the width as needed
-    aspect-ratio: 1.4 / 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1.4;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    border-radius: 8px;
+  }
+  .paper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-radial-gradient(
+      circle at center,
+      #000,
+      var(--lines),
+      #000,
+      0,
+      #0000,
+      calc(var(--lines) * 2),
+      #0000 0
+    );
+    opacity: 0.2; /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure it is rendered under the text */
   }
